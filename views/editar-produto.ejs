@@ -1,0 +1,29 @@
+<%-include('./partials/header.ejs')%>
+
+<main >
+  <div class="menuThree" >
+    <h2>Editar Produto</h2>
+    <form  action="/produtos/editar/<%=produto.id%>?_method=PUT" method="post">
+  
+    <div class="form-group">
+      <label for="nome">Nome:</label>
+      <input type="text" id="nome" name="modelo" value="<%=produto.modelo%>" />
+    </div>
+    <div class="form-group">
+      <label for="valor">Valor:</label>
+      <input type="text" id="valor" name="fabricante" value="<%=produto.fabricante%>" />
+    </div>
+    </div>
+    <div class="form-group">
+      <label for="cor">Cor:</label>
+      <input type="text" id="cor" name="cor" value="<%=produto.cor%>" />
+    </div>
+    <div class="buttonSalvar" >
+      <button type="submit">Salvar</button>
+      <a href="/">Cancelar</a>
+    </div>
+  </div>
+  </form>
+</main>
+
+<%-include('./partials/footer.ejs')%>

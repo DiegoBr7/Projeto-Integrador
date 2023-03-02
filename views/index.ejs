@@ -1,0 +1,41 @@
+<%-include('./partials/header.ejs')%>
+
+<main class="listaOne">
+  <section class="menuOne">
+    <div class="coluna-cadastro">
+      <div class="coluna"><h3>ID</h3></div>
+      <div class="coluna"><h3>Produto</h3></div>
+      <div class="coluna"><h3>Fabricante</h3></div>
+      <div class="coluna"><h3>Cor</h3></div>
+    </div>
+    <a href="/produtos/editar" class="btn">Criar</a>
+  </section>
+
+  <% produtos.forEach(produto => { %>
+  <div>
+    <section class="buttonOne">
+      <div class="row">
+        <div class="item"><h3><%= produto.id %></h3></div>
+        <div class="item"><h3><%= produto.modelo %></h3></div>
+        <div class="item"><h3><%= produto.fabricante %></h3></div>
+        <div class="item"><h3><%= produto.cor %></h3></div>
+      </div>
+      <span>
+        <a  class="btn" href="/produtos/editar/<%=produto.id%>">
+          <span>Editar</span>
+        </a>
+      </span>
+
+      <span class="item">
+        <form action="/produtos/<%=produto.id%>?_method=DELETE" method="post">
+          <button type="submit"><span>Deletar</span></button>
+        </form>
+      </span>
+    </section>
+  </div>
+  <% }) %>
+</main>
+
+<%-include('./partials/footer.ejs')%>
+
+<!-- express nomeProjeto --ejs -->

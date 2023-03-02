@@ -1,0 +1,20 @@
+<%-include('./partials/header.ejs')%>
+
+<main>
+ <h2>Adicionar Produto</h2>
+ <form class="menuThree" action="/produtos/adicionar-produto" method="post">
+  <label for="cor">Cor</label>
+  <input type="text" name="cor" id="cor">
+  
+  <label for="modelo">Modelo</label>
+  <input type="text" name="modelo" id="modelo">
+  
+  <label for="fabricante">Fabricante</label>
+  <input type="text" name="fabricante" id="fabricante">
+  
+  
+  <button type="submit">Enviar</button>
+</form>
+</main>
+
+<%-include('./partials/footer.ejs')%>
