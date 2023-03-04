@@ -87,8 +87,12 @@ router.put('/:id', (req,res)=>{
 
 })
 
-router.get('/categoria' , (res, req)=>{
-  res.render('categoria', {title:'Express'})
+router.get('/cadastroCategoria' , (req, res)=>{
+  res.render('cadastroCategoria')
+})
+
+router.get('/categoria' , (req, res)=>{
+  res.render('categoria')
 })
 
 module.exports = router;

@@ -491,3 +491,40 @@ footer{
     margin-top: -2rem;
   }
 }
+
+.category{
+
+  width: 9rem;
+  float:left;
+  margin-right: 3rem;
+
+}
+
+.categoryTwo{
+  margin-top: 5rem;
+
+  width: 9rem;
+  float:left;
+}
+
+main table{
+  width: 40rem;
+  margin-top: 3rem; 
+ 
+}
+
+main table thead th{
+margin: 3rem auto;
+border: 0.1rem solid black;
+background-color: #eee;
+}
+
+main table tbody tr td{
+
+border: 0.1rem solid black;
+}
+
+.cat{
+  display: flex;
+  flex-direction: column;
+}
