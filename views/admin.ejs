@@ -1,0 +1,95 @@
+<%-include('./partials/header.ejs')%>
+
+
+    <main>
+      <section class="cat" >      
+
+        <h1>Administração</h1>
+        <ul>
+          <li>
+            <a href="#produtos"></a>
+          </li>
+          <li>
+            <a href="#categorias"></a>
+          </li>
+        </ul>
+        
+        <div class="category" >
+          <h1> Produtos  </h1>
+  
+          <!-- <button>Novo Produto</button> -->
+          <labey for="nome=produto" >Nome do Produto:</labey>
+          <input type="text" id="nome-produto" name="nome-produto">
+          
+          <label for="text" id="preço-produto" ></label>
+          <input type="text" id="preco-produto" name="preco-produto">
+          
+          <label for="categoria-produto" >Categoria do Produto:</label>
+
+<select name="categoria-produto" id="categoria-produto">
+<option value="1">Categoria 1</option>
+<option value="2">Categoria 2</option>
+<option value="3">Categoria 3</option>
+
+</select>
+
+      </div>
+      
+ 
+      <table>
+        <thead>
+          <tr>
+            <th>Nome</th>
+            <th>Preço</th>
+            <th>Categoria</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Produto 1</td>
+            <td>R$ 10,00</td>
+            <td>Categoria 1</td>
+          </tr>
+          <tr>
+            <td>Produto 2</td>
+            <td>R$ 20,00</td>
+            <td>Categoria 2</td>
+          </tr>
+        </tbody>
+      </table>
+        
+        <h2>Categorias</h2>
+
+    <form >
+     <label for="nome-categoria">Nome da Categoria</label>
+     <input type="text" id="nome-categoria" name="nome-categoria" > <br> <br>
+    
+     <input type="submit" value="Cadastrar Categoria" >
+    </form>
+  
+    <table>
+      <thead>
+        <tr>
+          <th>Nome</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Categoria 1</td>
+        </tr>
+        <tr>
+          <td>Categoria 2</td>
+        </tr>
+      </tbody>
+
+    </table>
+
+
+    </section>
+        
+      </main>
+
+
+
+      <%-include('./partials/footer.ejs')%>
+    

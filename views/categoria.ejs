@@ -41,31 +41,23 @@
       <section class="cachorro" >        
       
         <h2>Cachorro</h2>
-      <table>
-        <thead>
-          <tr>
-            <th>ID </th>
-            <th>NOME</th>
-            <th>PRECO</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>1</td>
-            <td>Produto 1</td>
-            <td>R$ 10,00</td>
-          </tr>
-          <tr>
-            <td>2</td>
-            <td>Produto 2</td>
-            <td>R$ 10,00</td>
-          </tr>
-          <tr>
-            <td>3</td>
-            <td>Produto 3</td>
-            <td>R$ 10,00</td>
-          </tr>
-        </tbody>
+        
+        <table>
+          <thead>
+            <tr>
+              <th>ID </th>
+              <th>NOME</th>
+      
+            </tr>
+          </thead>
+          <tbody>
+              <% categorias.forEach(categoria => { %>
+              <tr>
+                <td><%= categoria.id  %></td>
+                <td><%= categoria.nome  %></td> 
+              </tr>
+              <% }) %>
+            </tbody>
       </table>
       
       <h2>Gato</h2>

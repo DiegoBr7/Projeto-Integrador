@@ -9,8 +9,10 @@ var methodOverride = require('method-override')
 
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
-var cadastroRouter = require('./routes/cadastro');
-var produtoRouter = require('./routes/produtoRouter')
+var cadastroRouter = require('./routes/admin');
+var produtoRouter = require('./routes/produtoRouter');
+var categoriaRouter = require('./routes/categoria');
+var admin = require('./routes/admin')
 
 
 
@@ -30,7 +32,9 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
 app.use('/cadastro', cadastroRouter);
-app.use('/produtos',produtoRouter)
+app.use('/produtos',produtoRouter);
+app.use('/categoria',categoriaRouter);
+app.use('/admin',admin)
 
 
 // catch 404 and forward to error handler

@@ -1,47 +1,45 @@
-const { Produto } = require('../models');
+const { Produtos } = require('../models');
 
 
 module.exports = {
   index: async (req, res) => {
-    const produtos = await Produto.findAll()
+    const produtos = await Produtos.findAll()
     res.render('index', { produtos, title: "index" });
   },
   create: async (req, res) => {
-    const produtos = await Produto.create(
+    const produtos = await Produtos.create(
       {
         modelo: req.body.modelo,
         cor: req.body.cor,
         fabricante: req.body.fabricante
       }
     )
-    res.redirect("/adicionar-produto");
+    res.redirect("/produtos");
   },
   form: async (req, res) => {
     const { id } = req.params;
     if (!id) {
       res.render('adicionar-produto', { title: "index" })
     }
-    let produto = await Produto.findByPk(id)
+    let produto = await Produtos.findByPk(id)
     res.render('editar-produto', { produto, title: "index" })
   },
 
   update: async (req, res) => {
     const { id } = req.params;
-    const { nome, preco, id_categorias } = req.body;
-    console.log(nome, preco , id_categorias)
-    const produtos = await Produto.update(
-      { nome, preco , id_categorias },
+    const { modelo, cor, fabricante } = req.body;
+    const produtos = await Produtos.update(
+      { modelo, cor, fabricante },
       {
         where: { id },
       },
     )
-    console.log(produtos,'produtos')
-    res.redirect("/");
+    res.redirect("/produtos");
   },
 
   delete: async (req, res) => {
     const { id } = req.params;
-    await Produto.destroy(
+    await Produtos.destroy(
       {
         where: {id}
       }

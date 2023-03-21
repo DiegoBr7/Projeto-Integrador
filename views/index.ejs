@@ -2,13 +2,15 @@
 
 <main class="listaOne">
   <section class="menuOne">
-    <div class="coluna-cadastro">
-      <div class="coluna"><h3>ID</h3></div>
-      <div class="coluna"><h3>Produto</h3></div>
-      <div class="coluna"><h3>Fabricante</h3></div>
-      <div class="coluna"><h3>Cor</h3></div>
-    </div>
-    <a href="/produtos/editar" class="btn">Criar</a>
+<div class="coluna" >
+  <h3>ID</h3>
+  <h3>Nome</h3>
+  <h3>Preco</h3>
+  <h3>Categorias</h3>
+
+</div>
+
+    <a href="/produtos/editar" class="btnOne">Criar</a>
   </section>
 
   <% produtos.forEach(produto => { %>
@@ -16,9 +18,9 @@
     <section class="buttonOne">
       <div class="row">
         <div class="item"><h3><%= produto.id %></h3></div>
-        <div class="item"><h3><%= produto.modelo %></h3></div>
-        <div class="item"><h3><%= produto.fabricante %></h3></div>
-        <div class="item"><h3><%= produto.cor %></h3></div>
+        <div class="item"><h3><%= produto.nome %></h3></div>
+        <div class="item"><h3><%= produto.preco %></h3></div>
+        <div class="item"><h3><%= produto.id_categorias %></h3></div>
       </div>
       <span>
         <a  class="btn" href="/produtos/editar/<%=produto.id%>">
