@@ -4,6 +4,7 @@ var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 var methodOverride = require('method-override')
+var session = require('express-session')
 
 
 
@@ -13,6 +14,9 @@ var cadastroRouter = require('./routes/admin');
 var produtoRouter = require('./routes/produtoRouter');
 var categoriaRouter = require('./routes/categoria');
 var admin = require('./routes/admin')
+var autenticacaoRouter = require('./routes/autenticacao')
+var homeRouter = require('./routes/home')
+var loginRouter = require('./routes/login')
 
 
 
@@ -28,6 +32,14 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
+app.use(session(
+  {
+    secret:"Um ninho de mafagafos tinha sete mafagafinhos.Quem desmafagar o ninho de mafagafos bom desmafagafador será.",
+    resave:true,
+    saveUninitialized:true
+
+  }
+))
 
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
@@ -35,6 +47,9 @@ app.use('/cadastro', cadastroRouter);
 app.use('/produtos',produtoRouter);
 app.use('/categoria',categoriaRouter);
 app.use('/admin',admin)
+app.use('/autenticacao',autenticacaoRouter)
+app.use('/home', homeRouter);
+app.use('/login', loginRouter)
 
 
 // catch 404 and forward to error handler

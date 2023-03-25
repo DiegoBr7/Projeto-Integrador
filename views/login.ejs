@@ -1,0 +1,23 @@
+<%-include('./partials/header.ejs')%>
+
+
+<main>
+    <h1>Login criado com sucesso</h1>
+
+    <form action="/autenticacao/login" method="post" class="login-form">
+        <h1>Login</h1>
+        <label for="username"><b>Usuário</b></label>
+        <input type="text" placeholder="Digite seu nome de usuário" id="username" name="username" required>
+        <label for="password"><b>Senha</b></label>
+        <input type="password" placeholder="Digite sua senha" id="password" name="password" required>
+        <button type="submit">Entrar</button>
+    </form>
+</main>
+
+
+<%-include('./partials/footer.ejs')%>
+
+
+//  cadastrar o usuario  na session (middleware) antes de direcionar
+
+//  redirecionar o usuario PARA  o login

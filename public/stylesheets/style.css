@@ -700,3 +700,62 @@ section th {
   color: #fff;
   font-weight: bold;
 }
+
+
+
+/* ---------------------AUTENTICACAO------------------------- */
+
+
+.login-form, .signup-form {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  width: 400px;
+}
+
+.login-form h1, .signup-form h1 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.login-form label, .signup-form label {
+  font-size: 16px;
+  font-weight: bold;
+  display: block;
+  margin-bottom: 10px;
+}
+
+.login-form input[type="text"], .signup-form input[type="text"], 
+.login-form input[type="email"], .signup-form input[type="email"], 
+.login-form input[type="password"], .signup-form input[type="password"] {
+  border-radius: 5px;
+  border: none;
+  padding: 10px;
+  margin-bottom: 20px;
+  width: 100%;
+}
+
+button[type="submit"] {
+  background-color: var(--primary-color);
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+}
+button[type="submit"]:hover {
+  background-color:var(--primary-color);
+}
+
+@media screen and (max-width: 600px) {
+  .container {
+      margin-top: 20px;
+  }
+
+  .login-form, .signup-form {
+      width: 80%;
+  }
+}

@@ -1,0 +1,204 @@
+<%-include('./partials/header.ejs')%>
+
+
+  <main>
+    <section class="destaques">
+      <h1>Destaques da Semana</h1>
+      <div class="carousel">
+        <div class="carousel-slides">
+          <!-- Radio Buttons -->
+          <input type="radio" name="slides-btn" id="radio1">
+          <input type="radio" name="slides-btn" id="radio2">
+          <input type="radio" name="slides-btn" id="radio3">
+          <input type="radio" name="slides-btn" id="radio4">
+          <input type="radio" name="slides-btn" id="radio5">
+          <!-- Slide Images -->
+          <div class="slide-imgs first-img">
+            <img src="./img/destaque1.jpeg" alt="Imagem destaque de cachorro">
+          </div>
+          <div class="slide-imgs">
+            <img src="./img/destaque2.jpeg" alt="Imagem destaque cão e gato">
+          </div>
+          <div class="slide-imgs">
+            <img src="./img/destaque3.jpeg" alt="Imagem destaque cachorro de coleira">
+          </div>
+          <div class="slide-imgs">
+            <img src="./img/destaque4.jpeg" alt="Imagem destaque de gato">
+          </div>
+          <div class="slide-imgs">
+            <img src="./img/destaque5.jpeg" alt="Imagem destaque cão e gato">
+          </div>
+          <!-- Carousel Navigation -->
+          <div class="carousel-navigation">
+            <label for="radio1" class="carousel-btn btn1"></label>
+            <label for="radio2" class="carousel-btn btn2"></label>
+            <label for="radio3" class="carousel-btn btn3"></label>
+            <label for="radio4" class="carousel-btn btn4"></label>
+            <label for="radio5" class="carousel-btn btn5"></label>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <section class="ofertas">
+      <h2>Ofertas do dia</h2>
+      <div class="card-container">
+        <input type="radio" name="card-dot" id="card-one">
+        <input type="radio" name="card-dot" id="card-two">
+        <div class="main-card">
+
+          <div class="cards">
+            <div class="card">
+              <article class="content">
+                <a href="#">
+                  <div class="card-img">
+                    <img src="./img/oferta1.webp" alt="Coleira para cães">
+                  </div>
+                  <div class="card-details">
+                    <p class="card-product-name">Coleira para cães</p>
+                    <p class="card-product-section">Acessórios</p>
+                    <p class="card-product-price">R$ xxx,xx</p>
+                  </div>
+                </a>
+              </article>
+            </div>
+            <div class="card">
+              <article class="content">
+                <a href="#">
+                  <div class="card-img">
+                    <img src="./img/oferta2.webp" alt="Macaco de pelúcia">
+                  </div>
+                  <div class="card-details">
+                    <p class="card-product-name">Macaco de Pelúcia</p>
+                    <p class="card-product-section">Brinquedos</p>
+                    <p class="card-product-price">R$ xxx,xx</p>
+                  </div>
+                </a>
+              </article>
+            </div>
+            <div class="card">
+              <article class="content">
+                <a href="#">
+                  <div class="card-img">
+                    <img src="./img/oferta3.webp" alt="Moletom com capuz">
+                  </div>
+                  <div class="card-details">
+                    <p class="card-product-name">Moletom com Capuz</p>
+                    <p class="card-product-section">Roupas</p>
+                    <p class="card-product-price">R$ xxx,xx</p>
+                  </div>
+                </a>
+              </article>
+            </div>
+          </div>
+
+          <div class="cards">
+            <div class="card">
+              <article class="content">
+                <a href="#">
+                  <div class="card-img">
+                    <img src="./img/oferta4.webp" alt="Cama para gatos">
+                  </div>
+                  <div class="card-details">
+                    <p class="card-product-name">Cama Clássica</p>
+                    <p class="card-product-section">Cama, Mesa, Banho</p>
+                    <p class="card-product-price">R$ xxx,xx</p>
+                  </div>
+                </a>
+              </article>
+            </div>
+            <div class="card">
+              <article class="content">
+                <a href="#">
+                  <div class="card-img">
+                    <img src="./img/oferta5.webp" alt="Bolsa para transporte">
+                  </div>
+                  <div class="card-details">
+                    <p class="card-product-name">Bolsa para Transporte</p>
+                    <p class="card-product-section">Acessórios</p>
+                    <p class="card-product-price">R$ xxx,xx</p>
+                  </div>
+                </a>
+              </article>
+            </div>
+            <div class="card">
+              <article class="content">
+                <a href="#">
+                  <div class="card-img">
+                    <img src="./img/oferta6.webp" alt="Loção hidratante">
+                  </div>
+                  <div class="card-details">
+                    <p class="card-product-name">Hidratante para Coxins</p>
+                    <p class="card-product-section">Cosméticos</p>
+                    <p class="card-product-price">R$ xxx,xx</p>
+                  </div>
+                </a>
+              </article>
+            </div>
+          </div>
+        </div>
+        <div class="card-button">
+          <label for="card-one" class="card-btn1 card-btn-active"></label>
+          <label for="card-two" class="card-btn2"></label>
+        </div>
+      </div>
+    </section>
+    
+    <section class="categorias">
+      <h2>Seções</h2>
+      <div class="categorias-container">
+
+        <div class="categorias-group">
+          <a href="#">
+            <img class="icon-categorias" src="../public/images/cat-adocao.png" alt="Categoria Adoção" />
+            <p>Adoção</p>
+          </a>
+    
+          <a href="#">
+            <img class="icon-categorias" src="../public/images/cat-mais-comprados.png" alt="Categoria mais comprados" />
+            <p>Mais Comprados</p>
+          </a>
+        </div>
+
+        <div class="categorias-group">
+          <a href="#">
+            <img class="icon-categorias" src="../public/images/cat-novidades.png" alt="Categoria Novidades" />
+            <p>Novidades</p>
+          </a>
+    
+          <a href="#">
+            <img class="icon-categorias" src="../public/images/cat-recomendados.png" alt="Categoria Recomendados" />
+            <p>Recomendados</p>
+          </a>
+        </div>
+
+        <div class="categorias-group">
+          <a href="#">
+            <img class="icon-categorias" src="../public/images/cat-brinquedos.png" alt="Categoria Brinquedos" />
+            <p>Brinquedos</p>
+          </a>
+    
+          <a href="#">
+            <img class="icon-categorias" src="../public/images/cat-roupas.png" alt="Categoria Roupas" />
+            <p>Roupas</p>
+          </a>
+        </div>
+
+        <div class="categorias-group">
+          <a href="#">
+            <img class="icon-categorias" src="./img/cat-cosmeticos.png" alt="Categoria Cosméticos" />
+            <p>Cosméticos</p>
+          </a>
+    
+          <a href="#">
+            <img class="icon-categorias" src="./img/cat-alimentacao.png" alt="Categoria Alimentação" />
+            <p>Alimentação</p>
+          </a>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+<%-include('./partials/footer.ejs')%>

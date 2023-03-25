@@ -9,12 +9,12 @@ module.exports = {
   create: async (req, res) => {
     const produtos = await Produto.create(
       {
-        modelo: req.body.modelo,
-        cor: req.body.cor,
-        fabricante: req.body.fabricante
+        nome: req.body.nome,
+        preco: req.body.preco,
+        id_categorias: req.body.id_categorias
       }
     )
-    res.redirect("/adicionar-produto");
+    res.redirect("/");
   },
   form: async (req, res) => {
     const { id } = req.params;
