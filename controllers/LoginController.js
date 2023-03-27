@@ -25,13 +25,16 @@ module.exports = {
                 // Criando uma sessao com usuario logado
            
                 req.session.user = user
-                redirect('/login');
+                redirect('/home');
             }else{
+                console.log('comparacao de senha:')
                 res.render('autenticacao',{erro:'senha incorreta'})
             }
         } catch{
-        
+            console.log('erro inesperado')
             res.render('autenticacao',{erro:'erro inesperado'})
+
+
         }
     
     }

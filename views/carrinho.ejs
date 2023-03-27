@@ -1,0 +1,144 @@
+
+
+    
+    <!DOCTYPE html>
+    <html lang="pt-BR">
+    
+    <head>
+      <meta charset="UTF-8" />
+      <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="stylesheet" href="./stylesheets/style2.css" />
+      <title>Petting Mall</title>
+    </head>
+    
+    <body>
+        <%-include('./partials/header.ejs')%>
+
+      <main>
+    
+        <section class="cart">
+          <h1>Meu Carrinho</h1>
+          <div class="cart-container">
+            <div class="cart-products">
+              <div class="cart-title">
+                <h2>Produtos</h2>
+                <h2>Qtd.</h2>
+                <h2>Preço</h2>
+              </div>
+              <div class="cart-products-info">
+                <img src="./img/cart-product1.webp" alt="Produto no carrinho 1">
+                <div class="cart-product-description">
+                  <p>Cama Clássica Flicks Cáqui Pequena Cáqui Pequena Cáqui Pequena Cáqui Pequena Cáqui Pequena</p>
+                  <p>Marca: Flicks</p>
+                  <p>Em estoque</p>
+                </div>
+              </div>
+              <div class="cart-product-quantity">
+                <div class="cart-add-remove">
+                  <button type="button" id="cart-minus-button">−</button>
+                  <span>1</span>
+                  <button type="button" id="cart-plus-button">+</button>
+                </div>
+                <a class="cart-remove-item" href="#"><span>Remover</span></a>
+              </div>
+              <div class="cart-product-price">
+                <p>R$ 179,90</p>
+              </div>
+            </div>
+    
+            <div class="cart-shipping">
+              <h2>Frete e prazo</h2>
+              <input type="tel" name="cart-cep" id="cart-cep" placeholder="CEP">
+              <button type="submit">Buscar</button>
+            </div>
+    
+            <aside class="cart-summary">
+              <h2>Resumo do pedido</h2>
+              <ul>
+                <li>frete</li>
+                <li>produtos</li>
+                <li id="coupon">cupom</li>
+                <li>total</li>
+              </ul>
+              <ul class="cart-price">
+                <li>R$ 5,90</li>
+                <li>R$ 179,90</li>
+                <li id="coupon-discount">inserir</li>
+                <li>R$ 185,80</li>
+              </ul>
+              <div class="goto-payment">
+                <button type="button">Finalizar a compra</button>
+              </div>
+              <a href="#">Continuar comprando</a>
+            </aside>
+          </div>
+        </section>
+    
+      </main>
+    
+      <footer class="sale-footer">
+        <div class="copyright">
+          <p>Copyright© 2022 PettingMall - Todos os direitos reservados</p>
+          <p>Made with <span class="heart">♥</span> by Grupo5-fs_tn17</p>
+        </div>
+     
+<%-include('./partials/footer.ejs')%>
+
+
+
+
+
+
+
+<!-- 
+
+    <div class="carrinhoOne" >
+        
+        <div class="carrinhoTwo" >
+            <h1>Carrinho de Compra</h1>
+            <h1>Produto:</h1> <button>Deletar</button>   
+            <h1>Quantidade:</h1> <button>adicionar </button><button>remover</button>
+            <h1>Preço:</h1>
+            <h1>Total:</h1>
+            <button>Deletar</button>               
+            
+        </div>
+        
+        <div class="carrinhoThree">
+            <h1>Calcula o Frete</h1>
+             <form action="calcularFrete" method="post">
+
+                 <input type="text" name="cep" id="cep" placeholder="Digite o seu Cep" >
+                 <button id="Calcular" >Calcular</button>        
+
+                </form>
+            
+        <div>Frete:  </div>
+        <div class="pedido" >
+         <aside class="cart-summary">
+              <h2>Resumo do pedido</h2>
+              <ul>
+                <li>frete</li>
+                <li>produtos</li>
+                <li id="coupon">cupom</li>
+                <li>total</li>
+              </ul>
+              <ul class="cart-price">
+                <li>R$ 5,90</li>
+                <li>R$ 179,90</li>
+                <li id="coupon-discount">inserir</li>
+                <li>R$ 185,80</li>
+              </ul>
+              <div class="goto-payment">
+                <button type="button">Finalizar a compra</button>
+              </div>
+              <a href="#">Continuar comprando</a>
+            </aside>
+        </div>
+
+
+        </div>
+    
+    </div>
+ -->

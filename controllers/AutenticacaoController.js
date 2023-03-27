@@ -3,7 +3,8 @@ const bcrypt = require ('bcryptjs');
 
 module.exports = {
 index:(req,res)=>{
-    res.render('autenticacao',{erro:'error'})
+
+    res.render('login',{erro:''})
 },
 
 autenticacao:async(req,res)=>{
@@ -16,7 +17,7 @@ autenticacao:async(req,res)=>{
         });
                  
         if (!user ){
-            return res.render('autenticacao',{erro:'Usuario nao encontrado'})
+            return res.render('login',{erro:'Usuario nao encontrado'})
         }
 
         if(await bcrypt.compare(password, user.password)){
@@ -26,11 +27,11 @@ autenticacao:async(req,res)=>{
             req.session.user = user
             res.redirect('/');
         }else{
-            res.render('autenticacao',{erro:'senha incorreta'})
+            res.render('login',{erro:'senha incorreta'})
         }
-    } catch{
-       
-        res.render('home',{erro:'erro inesperado'})
+    } catch(erro){
+        res.render('login',{erro:'erro inesperado'})
+        console.log(erro)
     }
 
 },
