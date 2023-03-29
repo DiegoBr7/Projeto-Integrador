@@ -236,7 +236,7 @@ h1, h2, h3 {
   border: 1px solid var(--primary-opacity);
   border-radius: 10px;
   display: flex;
-  flex-flow: row wrap;
+  flex-flow: row ;
   margin: 1rem auto 6rem;
   width: 50%;
 }

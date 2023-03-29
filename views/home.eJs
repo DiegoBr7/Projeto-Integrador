@@ -1,5 +1,18 @@
-<%-include('./partials/header.ejs')%>
+<!DOCTYPE html>
+<html lang="pt-BR">
 
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="shortcut icon" href="./img/favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="./stylesheets/home.css" />
+  <script src="./js/index.js" defer></script>
+  <title>Petting Mall</title>
+</head>
+
+<body>
+  <%-include('./partials/header.ejs')%>
 
   <main>
     <section class="destaques">
@@ -14,19 +27,19 @@
           <input type="radio" name="slides-btn" id="radio5">
           <!-- Slide Images -->
           <div class="slide-imgs first-img">
-            <img src="./img/destaque1.jpeg" alt="Imagem destaque de cachorro">
+            <img src="./images/home/img/destaque1.jpeg" alt="Imagem destaque de cachorro">
           </div>
           <div class="slide-imgs">
-            <img src="./img/destaque2.jpeg" alt="Imagem destaque cão e gato">
+            <img src="./images/home/img/destaque2.jpeg" alt="Imagem destaque cão e gato">
           </div>
           <div class="slide-imgs">
-            <img src="./img/destaque3.jpeg" alt="Imagem destaque cachorro de coleira">
+            <img src="./images/home/img/destaque3.jpeg" alt="Imagem destaque cachorro de coleira">
           </div>
           <div class="slide-imgs">
-            <img src="./img/destaque4.jpeg" alt="Imagem destaque de gato">
+            <img src="./images/home/img/destaque4.jpeg" alt="Imagem destaque de gato">
           </div>
           <div class="slide-imgs">
-            <img src="./img/destaque5.jpeg" alt="Imagem destaque cão e gato">
+            <img src="./home/img/destaque5.jpeg" alt="Imagem destaque cão e gato">
           </div>
           <!-- Carousel Navigation -->
           <div class="carousel-navigation">
@@ -52,7 +65,7 @@
               <article class="content">
                 <a href="#">
                   <div class="card-img">
-                    <img src="./img/oferta1.webp" alt="Coleira para cães">
+                    <img src="./images/home/img/oferta1.webp" alt="Coleira para cães">
                   </div>
                   <div class="card-details">
                     <p class="card-product-name">Coleira para cães</p>
@@ -66,7 +79,7 @@
               <article class="content">
                 <a href="#">
                   <div class="card-img">
-                    <img src="./img/oferta2.webp" alt="Macaco de pelúcia">
+                    <img src="./images/home/img/oferta2.webp" alt="Macaco de pelúcia">
                   </div>
                   <div class="card-details">
                     <p class="card-product-name">Macaco de Pelúcia</p>
@@ -80,7 +93,7 @@
               <article class="content">
                 <a href="#">
                   <div class="card-img">
-                    <img src="./img/oferta3.webp" alt="Moletom com capuz">
+                    <img src="./images/home/img/oferta3.webp" alt="Moletom com capuz">
                   </div>
                   <div class="card-details">
                     <p class="card-product-name">Moletom com Capuz</p>
@@ -97,7 +110,7 @@
               <article class="content">
                 <a href="#">
                   <div class="card-img">
-                    <img src="./img/oferta4.webp" alt="Cama para gatos">
+                    <img src="./images/home/img/oferta4.webp" alt="Cama para gatos">
                   </div>
                   <div class="card-details">
                     <p class="card-product-name">Cama Clássica</p>
@@ -111,7 +124,7 @@
               <article class="content">
                 <a href="#">
                   <div class="card-img">
-                    <img src="./img/oferta5.webp" alt="Bolsa para transporte">
+                    <img src="./images/home/img/oferta5.webp" alt="Bolsa para transporte">
                   </div>
                   <div class="card-details">
                     <p class="card-product-name">Bolsa para Transporte</p>
@@ -125,7 +138,7 @@
               <article class="content">
                 <a href="#">
                   <div class="card-img">
-                    <img src="./img/oferta6.webp" alt="Loção hidratante">
+                    <img src="./images/home/img/oferta6.webp" alt="Loção hidratante">
                   </div>
                   <div class="card-details">
                     <p class="card-product-name">Hidratante para Coxins</p>
@@ -150,48 +163,48 @@
 
         <div class="categorias-group">
           <a href="#">
-            <img class="icon-categorias" src="../public/images/cat-adocao.png" alt="Categoria Adoção" />
+            <img class="icon-categorias" src="./images/home/img/cat-adocao.png" alt="Categoria Adoção" />
             <p>Adoção</p>
           </a>
     
           <a href="#">
-            <img class="icon-categorias" src="../public/images/cat-mais-comprados.png" alt="Categoria mais comprados" />
+            <img class="icon-categorias" src="./images/home/img/cat-mais-comprados.png" alt="Categoria mais comprados" />
             <p>Mais Comprados</p>
           </a>
         </div>
 
         <div class="categorias-group">
           <a href="#">
-            <img class="icon-categorias" src="../public/images/cat-novidades.png" alt="Categoria Novidades" />
+            <img class="icon-categorias" src="./images/home/img/cat-novidades.png" alt="Categoria Novidades" />
             <p>Novidades</p>
           </a>
     
           <a href="#">
-            <img class="icon-categorias" src="../public/images/cat-recomendados.png" alt="Categoria Recomendados" />
+            <img class="icon-categorias" src="./images/home/img/cat-recomendados.png" alt="Categoria Recomendados" />
             <p>Recomendados</p>
           </a>
         </div>
 
         <div class="categorias-group">
           <a href="#">
-            <img class="icon-categorias" src="../public/images/cat-brinquedos.png" alt="Categoria Brinquedos" />
+            <img class="icon-categorias" src="./images/home/img/cat-brinquedos.png" alt="Categoria Brinquedos" />
             <p>Brinquedos</p>
           </a>
     
           <a href="#">
-            <img class="icon-categorias" src="../public/images/cat-roupas.png" alt="Categoria Roupas" />
+            <img class="icon-categorias" src="./images/home/img/cat-roupas.png" alt="Categoria Roupas" />
             <p>Roupas</p>
           </a>
         </div>
 
         <div class="categorias-group">
           <a href="#">
-            <img class="icon-categorias" src="./img/cat-cosmeticos.png" alt="Categoria Cosméticos" />
+            <img class="icon-categorias" src="./images/home/img/cat-cosmeticos.png" alt="Categoria Cosméticos" />
             <p>Cosméticos</p>
           </a>
     
           <a href="#">
-            <img class="icon-categorias" src="./img/cat-alimentacao.png" alt="Categoria Alimentação" />
+            <img class="icon-categorias" src="./images/home/img/cat-alimentacao.png" alt="Categoria Alimentação" />
             <p>Alimentação</p>
           </a>
         </div>
@@ -201,4 +214,11 @@
 
   </main>
 
-<%-include('./partials/footer.ejs')%>
+
+  <%-include('./partials/footer.ejs')%>
+  
+  <a href="#" class="back-to-top">➤</a>
+
+</body>
+
+</html>

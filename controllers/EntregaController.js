@@ -6,15 +6,27 @@ const app = express();
 
 const ERRO_500 = 'Erro interno do servidor!';
 const ERRO_404 = 'nao encontrado';
-const ERRO_400 = 'Request invalido'
+const ERRO_400 = 'Request invalido';
+
+const valoresFretePorRegiao = {
+  'SP' : 'R$ 19,90',
+  'RS' : 'R$ 39,90',
+  'Outros' : 'R$ 40,00'
+
+
+}
 
 module.exports ={
     async obterEnderecoPorCep (req,res) {
 
     try{
-        const {cep} = req.params;
-        const endereco = await buscarEnderecoPorCep(cep);
-        return res.status(200).json(endereco);
+        const {cep} = req.query;
+        const {uf} = await buscarEnderecoPorCep(cep);
+
+        const regiaoConhecida = uf in valoresFretePorRegiao;
+
+        const valorFrete = regiaoConhecida [regiaoConhecida? endereco.uf : 'Outros'] 
+        return res.status(200).json(valorFrete);
     }catch(erro){
       if(erro?.name === 'NOT_FOUND'){
         return res.status(404).json({mensagem: erro.message})

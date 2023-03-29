@@ -1,58 +1,62 @@
-const {Usuario} = require('../models')
-const bcrypt = require ('bcryptjs');
+const { Usuario } = require('../models')
+const bcrypt = require('bcryptjs');
 
 module.exports = {
-index:(req,res)=>{
+    index: (req, res) => {
 
-    res.render('login',{erro:''})
-},
+        res.render('login', { erro: '' })
+    },
 
-autenticacao:async(req,res)=>{
-  
-    try {
+    autenticacao: async (req, res) => {
 
-        const {password , username} = req.body;
-        const user = await Usuario.findOne({
-            where:{username}
-        });
-                 
-        if (!user ){
-            return res.render('login',{erro:'Usuario nao encontrado'})
+        try {
+            console.log('autenticacao')
+            const { password, username } = req.body;
+            console.log({ password, username })
+            const user = await Usuario.findOne({
+                where: { nome: username }
+            });
+            console.log('user', user)
+            if (!user) {
+                console.log('usuario nao existe')
+                return res.render('login', { erro: 'Usuario nao encontrado' })
+            }
+
+            if (await bcrypt.compare(password, user.senha)) {
+                console.log('comparando senha')
+                // Criando uma sessao com usuario logado
+
+                req.session.user = user
+                res.redirect('/home');
+            } else {
+                console.log('usuario ou senha errado')
+                res.render('login', { erro: 'senha incorreta' })
+            }
+        } catch (erro) {
+
+            console.log(erro)
+            res.render('login', { erro: 'erro inesperado' })
         }
 
-        if(await bcrypt.compare(password, user.password)){
-
-            // Criando uma sessao com usuario logado
-       
-            req.session.user = user
-            res.redirect('/');
-        }else{
-            res.render('login',{erro:'senha incorreta'})
-        }
-    } catch(erro){
-        res.render('login',{erro:'erro inesperado'})
-        console.log(erro)
-    }
-
-},
+    },
 
 
 
-criarUsuario: async (req, res) => {
+    criarUsuario: async (req, res) => {
 
-const rounds = 10;
-const hashedPassword = await bcrypt.hash(req.body.senha , rounds)
+        const rounds = 10;
+        const hashedPassword = await bcrypt.hash(req.body.senha, rounds)
 
-    const usuario = await Usuario.create(
-      {
-        nome: req.body.nome,
-        email: req.body.email,
-        senha: hashedPassword,
-        endereco:req.body.endereco,
-        telefone:req.body.telefone,
-      }
-    )
-    res.redirect('/login')
+        const usuario = await Usuario.create(
+            {
+                nome: req.body.nome,
+                email: req.body.email,
+                senha: hashedPassword,
+                endereco: req.body.endereco,
+                telefone: req.body.telefone,
+            }
+        )
+        res.redirect('/login')
     }
 
 }

@@ -27,7 +27,7 @@
                 <h2>Preço</h2>
               </div>
               <div class="cart-products-info">
-                <img src="./img/cart-product1.webp" alt="Produto no carrinho 1">
+                <img src="/images/cart-product1.webp" alt="Produto no carrinho 1">
                 <div class="cart-product-description">
                   <p>Cama Clássica Flicks Cáqui Pequena Cáqui Pequena Cáqui Pequena Cáqui Pequena Cáqui Pequena</p>
                   <p>Marca: Flicks</p>
@@ -54,27 +54,36 @@
             </div>
     
             <aside class="cart-summary">
-              <h2>Resumo do pedido</h2>
-              <ul>
-                <li>frete</li>
-                <li>produtos</li>
-                <li id="coupon">cupom</li>
-                <li>total</li>
-              </ul>
-              <ul class="cart-price">
-                <li>R$ 5,90</li>
-                <li>R$ 179,90</li>
-                <li id="coupon-discount">inserir</li>
-                <li>R$ 185,80</li>
-              </ul>
-              <div class="goto-payment">
-                <button type="button">Finalizar a compra</button>
-              </div>
-              <a href="#">Continuar comprando</a>
+              <form action="/" method="get">
+                <h2>Resumo do pedido</h2>
+                <table>
+                  <tr>
+                    <td>Frete:</td>
+                    <td>R$ 5,90</td>
+                  </tr>
+                  <tr>
+                    <td>Produtos:</td>
+                    <td>R$ 179,90</td>
+                  </tr>
+                  <tr>
+                    <td>Cupom:</td>
+                    <td id="coupon-discount">Inserir</td>
+                  </tr>
+                  <tr>
+                    <td>Total:</td>
+                    <td>R$ 185,80</td>
+                  </tr>
+                </table>
+                <div class="goto-payment">
+                  <button type="submit">Finalizar a compra</button>
+                </div>
+                <a href="#">Continuar comprando</a>
+              </form>
+            </form>
             </aside>
           </div>
         </section>
-    
+        
       </main>
     
       <footer class="sale-footer">

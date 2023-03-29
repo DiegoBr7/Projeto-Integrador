@@ -1,11 +1,20 @@
 
 var express = require('express');
-const CarrinhoController = require('../controllers/CarrinhoController');
-const EntregaController = require('../controllers/EntregaController');
 var router = express.Router();
 
-router.get('/', CarrinhoController.index )
 
-router.post('/' , EntregaController.obterEnderecoPorCep)
+const CarrinhoController = require('../controllers/CarrinhoController');
+const EntregaController = require('../controllers/EntregaController');
+const carrinhoController = require('../controllers/CarrinhoController');
+
+
+
+// router.get('/carrinho', carrinhoController.calcularFrete);
+
+router.get('/endereco', EntregaController.obterEnderecoPorCep)
+
+router.get('/', carrinhoController.index )
+
+// router.post('/' , EntregaController.obterEnderecoPorCep)
 
 module.exports = router

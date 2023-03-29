@@ -1,6 +1,85 @@
-<%-include('./partials/header.ejs')%>
+<!DOCTYPE html>
+<html lang="pt-BR">
+    
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="./stylesheets/login.css">
+        <title>Login</title>
+    </head>
+    
+    <body>
+        <header>
+            <nav class="navbar">
+              <img class="menu-icon" src="../images/Hamburger_icon.svg" alt="Ícone do menu" />
+        
+              <a href="#"><img class="logo-menu" src="../images/logo-petting-mall.png" alt="Logo da Petting Mall" /></a>
+        
+              <div class="search-container">
+                <span><img class="search-icon" src="../images/menu-magnifying-glass.svg" alt="Ícone de lupa" /></span>
+                <input class="search-box" type="search" name="search" placeholder="Digite o nome do produto" />
+                <button class="search-button" type="submit">Buscar</button>
+              </div>
+        
+              <div class="navbar-icons">
+                <a href="#"><img src="../images/menu-login-icon.png" alt="Ícone de login" /></a>
+                <a href="#"><img src="../images/menu-cart-icon.png" alt="Ícone do carrinho de compras" /></a>
+              </div>
+        
+              <ul class="menu-list">
+                <li><a href="#">Alimentação</a></li>
+                <li><a href="#">Acessórios</a></li>
+                <li><a href="#">Brinquedos</a></li>
+                <li><a href="#">Cama & Mesa & Banho</a></li>
+                <li><a href="#">Cosméticos</a></li>
+                <li><a href="#">Roupas</a></li>
+              </ul>
+            </nav>
+          </header>
+
+  <main>
+    <section class="login">
+      <!-- Login -->
+      <div>
+        <h2>Já sou cliente Petting Mall</h2>
+        <form action="/autenticacao/login" method="post">
+            <h1>Login</h1>
+            <label for="username"><b>Usuário</b></label>
+            <input type="text" placeholder="Digite seu nome de usuário" id="username" name="username" required>
+            <label for="password"><b>Senha</b></label>
+            <input type="password" placeholder="Digite sua senha" id="password" name="password" required>
+            <button type="submit">Entrar</button>
+    
+          <a href="#">Esqueci minha senha</a>
+        </form>
+      </div>
+
+      <!-- Register -->
+      <div>
+        <h2>Quero me cadastrar</h2>
+        <form action="#" method="post">
+          <label for="register-email">E-mail para cadastro</label>
+          <input type="email" name="register-email" id="register-email" placeholder="email@email.com.br" required>
+          <button type="submit">Continuar</button>
+
+        </form>
+
+      </div>
+    </section>
+
+  </main>
+
+    <%-include('./partials/footer.ejs')%>
+  
+</body>
+
+</html>
 
 
+
+
+<!-- 
 <main>
     <h1>Login criado com sucesso</h1>
 
@@ -12,12 +91,13 @@
         <input type="password" placeholder="Digite sua senha" id="password" name="password" required>
         <button type="submit">Entrar</button>
 
-    <h3><%= erro || '' %></h3>
+     <h3> 
+   
+    </h3> 
     </form>
-</main>
+</main> -->
 
 
-<%-include('./partials/footer.ejs')%>
 
 
 //  cadastrar o usuario  na session (middleware) antes de direcionar

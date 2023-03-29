@@ -8,6 +8,6 @@ const login = require('../controllers/loginController');
 
 router.get('/' , loginController.index);
 
-router.post('/login', loginController.login);
+// router.post('/login', loginController.login);
 
 module.exports = router;
