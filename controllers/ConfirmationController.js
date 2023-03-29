@@ -1,7 +1,7 @@
 
 module.exports = {
     index:(req,res)=>{
-        res.render('comfirmation',{title:'express'})
+        res.render('confirmation',{title:'express'})
     }
 
 

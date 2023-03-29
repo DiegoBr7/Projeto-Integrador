@@ -5,6 +5,8 @@ var router = express.Router();
 
 router.get('/', AutenticacaoController.index )
 
+router.get('/login' ,AutenticacaoController.login)
+
 router.post('/',AutenticacaoController.criarUsuario)
 
 

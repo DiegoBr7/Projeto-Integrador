@@ -18,7 +18,6 @@ module.exports = {
     const {id} = req.params
     const categorias = await Categoria.findAll()
     res.render('categoria',{categorias})
-    
 
 
   }
