@@ -7,7 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="shortcut icon" href="./img/favicon.ico" type="image/x-icon">
   <link rel="stylesheet" href="./stylesheets/home.css" />
-  <script src="./js/index.js" defer></script>
+  <script src="./javascripts/home.js" defer></script>
   <title>Petting Mall</title>
 </head>
 
@@ -68,10 +68,12 @@
                     <img src="./images/home/img/oferta1.webp" alt="Coleira para cães">
                   </div>
                   <div class="card-details">
-                    <p class="card-product-name">Coleira para cães</p>
-                    <p class="card-product-section">Acessórios</p>
-                    <p class="card-product-price">R$ xxx,xx</p>
-                  </div>
+                    <a href="/carrinho" id="<%=produtos[0].id%>"  class="acessorios">
+                      <p class="card-product-section">Acessórios</p>
+                      <p class="card-product-name"><%=produtos[0].nome%></p>
+                      <p class="card-product-price">R$ <%=produtos[0].preco %></p>
+                    </a>
+                    </div>
                 </a>
               </article>
             </div>

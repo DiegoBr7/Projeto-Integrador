@@ -16,7 +16,7 @@ var categoriaRouter = require('./routes/categoria');
 var admin = require('./routes/admin')
 var autenticacaoRouter = require('./routes/autenticacao')
 var homeRouter = require('./routes/home')
-
+var alimentacaoRouter = require('./routes/alimentacao')
 var carrinhoRouter = require('./routes/carrinho')
 var confirmationRouter = require('./routes/confirmation')
 
@@ -52,7 +52,7 @@ app.use('/categoria',categoriaRouter);
 app.use('/admin',admin)
 app.use('/autenticacao',autenticacaoRouter)
 app.use('/home', homeRouter);
-
+app.use('/alimentacao', alimentacaoRouter)
 app.use('/carrinho' , carrinhoRouter);
 app.use('/confirmation', confirmationRouter);
 

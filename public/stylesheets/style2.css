@@ -90,6 +90,7 @@ h1, h2, h3 {
   font-weight: 600;
 }
 
+
 .cart-products {
   display: flex;
   flex-flow: row wrap;

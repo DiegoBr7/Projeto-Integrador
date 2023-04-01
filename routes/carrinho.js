@@ -3,7 +3,6 @@ var express = require('express');
 var router = express.Router();
 
 
-const CarrinhoController = require('../controllers/CarrinhoController');
 const EntregaController = require('../controllers/EntregaController');
 const carrinhoController = require('../controllers/CarrinhoController');
 
@@ -12,6 +11,8 @@ const carrinhoController = require('../controllers/CarrinhoController');
 // router.get('/carrinho', carrinhoController.calcularFrete);
 
 router.get('/endereco', EntregaController.obterEnderecoPorCep)
+
+router.get('/',carrinhoController.exibir)
 
 router.get('/', carrinhoController.index )
 

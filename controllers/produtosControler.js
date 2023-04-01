@@ -4,7 +4,8 @@ const { Produto } = require('../models');
 module.exports = {
   index: async (req, res) => {
     const produtos = await Produto.findAll()
-    res.render('index', { produtos, title: "index" });
+    console.log(produtos)
+    res.render('home', { produtos, title: "index" });
   },
   create: async (req, res) => {
     const produtos = await Produto.create(
