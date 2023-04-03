@@ -1,35 +1,91 @@
+const itemAdicionado = document.getElementById("add-to-cart-1");
 
-const acessorio = document.getElementsByClassName('acessorios');
-console.log(acessorio[0])
+itemAdicionado.addEventListener('click',function(evt){
+evt.preventDefault();
 
-const nomeAcessorio = document.getElementsByClassName("card-product-name")[0]
-console.log(nomeAcessorio.value)
+//Obter as informacoes dos produtoo selecionados
 
-const precoAcessorio = document.getElementsByClassName("card-product-price")[0]
-console.log(precoAcessorio.value)
+const nomeValor = document.querySelector('card-product-name').textContent;
 
-acessorio[0].addEventListener('click', 
-function (event){
-    event.preventDefault();
-    console.log("CLICK")     
-    let local = []
-    localStorage.getItem('carrinho')
+const precoValor = document.querySelector('card-product-proce').textContent;
 
-  const acessorioValue = acessorio[0].value
-  console.log(acessorioValue)
+// criar um objeto com as infomacoes do produto
+const product = {
+   name:nomeValor,
+   price:precoValor
+}
 
-  const precoValue = precoAcessorio[0].value
-  console.log(precoValue)
 
-  const nomeValue = nomeAcessorio[0].value
-  console.log(nomeValue)
+// adiciona o produto no localStorage
 
-  local.push({acessorioValue,precoValue,nomeValue})
+let cartItems = JSON.parse(localStorage.getItem('cartItems')) || [];
 
-  localStorage.setItem('carrinho',JSON.stringify(local))
-  }
-  )
+cartItems.push(product);
 
+localStorage.setItem('cartItems', JSON.stringify(cartItems));
+
+// Redirecionar o usuario para a pagina de carrinho
+
+window.location.href = '/carrinho';
+
+})
+
+
+
+// -----------------------------------------------------------------------------------------
+
+// let carrinho = localStorage.getItem('carrinho');
+
+// if(carrinho === null){
+//  carrinho = [];
+// }else{
+//   carrinho = JSON.parse(carrinho)
+// }
+
+// carrinho.push({nome:nomeValor,preco:precoValor});
+
+// localStorage.setItem('carrinho', JSON.stringify(carrinho))
+
+// window.location.href('/carrinho')
+
+
+
+
+
+
+
+
+
+// const acessorio = document.getElementsByClassName('acessorios');
+// console.log(acessorio[0])
+
+// const nomeAcessorio = document.getElementsByClassName("card-product-name")[0]
+// console.log(nomeAcessorio.value)
+
+// const precoAcessorio = document.getElementsByClassName("card-product-price")[0]
+// console.log(precoAcessorio.value)
+
+// acessorio[0].addEventListener('click', 
+// function (event){
+//     event.preventDefault();
+//     console.log("CLICK")     
+//     let local = []
+//     localStorage.getItem('carrinho')
+
+//   const acessorioValue = acessorio[0].value
+//   console.log(acessorioValue)
+
+//   const precoValue = precoAcessorio[0].value
+//   console.log(precoValue)
+
+//   const nomeValue = nomeAcessorio[0].value
+//   console.log(nomeValue)
+
+//   local.push({acessorioValue,precoValue,nomeValue})
+
+//   localStorage.setItem('carrinho',JSON.stringify(local))
+//   }
+//   )
 
   // pegar o valor como get item
   //na tela de carrinho

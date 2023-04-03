@@ -52,12 +52,94 @@
     quant.innerText = quantidade;
   });
 
+// ------------------------------------------------------------------------------------------------
+let carrinho = JSON.parse(localStorage.getItem('carrinho'));
+const cartProdutos = document.querySelector('.cart-products');
 
+carrinho.forEach(function(item) {    
+  const productDiv = document.createElement('div');
+  productDiv.classList.add('add-products-info');
+  productDiv.innerHTML = `
+    <img src="${item.image}" alt="${item.name}">
+    <div class="cart-product-description">
+      <p>${item.name}</p>
+      <p>Marca:${item.brand}</p>
+      <p>Em estoque</p>
+    </div>
+    <div class="cart-product-quantity">
+      <div class="cart-add-remove">
+        <button type="button" id="cart-minus-button">−</button>
+        <span class="quant">${item.quantity}</span>
+        <button type="button" id="cart-plus-button">+</button>
+      </div>
+      <a class="cart-remove-item" href="#"><span>Remover</span></a>
+    </div>
+    <div class="cart-product-price">
+      <p> R$ ${item.price} </p>
+    </div>
+  `;
+  cartProdutos.appendChild(productDiv);
+});
+  
+  
 
-
+  
+  
  
-
+// ----------------------------------------------------------------------------------------------------------
    
+const quantidadeFrete = document.getElementById('frete')
+
+const quantidadePreco = document.getElementById('preco-produto')
+
+const totalProduto = document.getElementById('total-produto')
+
+function calcularTotal (){
+  const frete = parseFloat(quantidadeFrete.value);
+  const preco = parseFloat(quantidadePreco.value);
+  const total = frete + preco;
+
+  totalProduto.innerText = total.toFixed(2);
+}
+
+calcularTotal()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   // try {
   //   const response = await fetch(url, {mode: "cors", method: 'get'});
   //   const data = await response.json();
@@ -66,7 +148,7 @@
 
   //   const total = calcularTotal(produto, valorFrete);
 
-  //   res.render('carrinho', {frete: valorFrete, total});
+  //   res.render('item', {frete: valorFrete, total});
   // } catch (error) {
   //   console.log(error);
   //   res.status(500).send('Erro ao calcular o frete');

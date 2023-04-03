@@ -66,7 +66,7 @@
                 <% produtos.forEach(produto => { %>
                   <tr>
                     <td>Produto:</td>
-                    <td>R$ <%= produto.preco %>  </td>
+                    <td>R$ <span  id="preco-produto"> <%= produto.preco %>   </span> </td>
                   </tr>
                   <% }) %>
                 
@@ -77,7 +77,7 @@
                 
                   <tr>
                     <td>Total:</td>
-                    <td>R$ 185,80</td>
+                    <td>R$ <span id="total-produto" >  </span> </td>
                   </tr>
                  
               </table>

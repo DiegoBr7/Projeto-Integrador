@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,41 +9,90 @@
     <title>Document</title>
 </head>
 <!-- include('./partials/header.ejs') -->
+
 <body>
-    <div class="tamanho" >
+    <div class="tamanho">
 
-     <input type="checkbox" id="chec"  >
-     <label class="menu-aberto" for="chec">
-   <img src="/images/menu-aberto.png" alt="" srcset="">
+        <input type="checkbox" id="chec">
+        <label class="menu-aberto" for="chec">
+            <img src="/images/menu-aberto.png" alt="" class="menuPagina">
 
-     </label>
-    <nav class="menu" >
-            <ul class="lista" >
+        </label>
+        <nav class="menu">
+            <ul class="lista">
                 <li><a class="mn" href="">Minha Conta</a> </li>
                 <li> <a class="mn" href="">Meus Pedidos</a></li>
-            <li><a class="mn" href="">Endereco</a></li>
-            <li><a class="mn" href="">Sair</a></li>
-            <li><a class="mn" href="">NAO SEI</a></li>
-        </ul>
-    </nav>
-    
-</div>
-    
+                <li> <a class="mn" href="">Assinaturas</a></li>
+                <li> <a class="mn" href="">Meus Cartões</a></li>
+                <li><a class="mn" href="">Endereço</a></li>
+                <li><a class="mn" href="">Favoritos</a></li>
+                <li><a class="mn" href="">Sair</a></li>
+            </ul>
+        </nav>
+
+
+        <main>
+            <div class="titulo">
+                <ul>
+                    <li class="dados"> <img src="/images/menu-login-icon.png" class="imgDados" width="50px"
+                        height="50px" alt=""> <a href="http://"><span>Nome do Usuário</span></a>
+                    <br>
+                    <br>
+                    <span class="span" style="margin-left: 105px;">Dados validados</span>
+                </li>
+                </ul>
+            </div>
+            <div class="tituloTwo">
+                <ul>
+                   
+                    <li class="dados"> <img src="/images/icone_segurança.png" class="imgDados" width="50px"
+                            height="50px" alt=""> <a href="http://"><span>Segurança</span></a>
+                        <br>
+                        <br>
+                        <span class="span" style="margin-left: 105px;">Você tem configurações pendentes</span>
+                    </li>
+                    <li class="dados"> <img src="/images/icone_pedido.png" class="imgDados" width="50px"
+                            height="50px" alt=""> <a href="http://"><span>Meus Pedidos</span></a>
+                        <br>
+                        <br>
+                        <span class="span" style="margin-left: 105px;">Selecione se há pedidos</span>
+                    </li>
+                    <li class="dados"> <img src="/images/icone_pet.png" class="imgDados" width="50px"
+                            height="50px" alt=""> <a href="http://"><span>Meus Pets</span></a>
+                        <br>
+                        <br>
+                        <span class="span" style="margin-left: 105px;">Adicionar um novo Pet</span>
+                    </li>
+                    <li class="dados"> <img src="/images/icone_cartao.png" class="imgDados" width="50px"
+                            height="50px" alt=""> <a href="http://"><span>Meus Cartões</span></a>
+                        <br>
+                        <br>
+                        <span class="span" style="margin-left: 105px;">Meus cartões cadastrados</span>
+                    </li>
+                    <li class="dados"> <img src="/images/icone_assinatura.png" class="imgDados" width="50px"
+                            height="50px" alt=""> <a href="http://"><span>Assinatura</span></a>
+                        <br>
+                        <br>
+                        <span class="span" style="margin-left: 105px;">Minhas Assinaturas</span>
+                    </li>
+                    <br>
+                </ul>
+            </div>
+
+
+        </main>
+    </div>
+
 </body>
+
 </html>
 
 
 
-<main>
 
+<%- %>
 
-
-</main>
-
-
-<%-   %> 
-
-<!-- <div class="usuarioOne" >
+    <!-- <div class="usuarioOne" >
 
     <div class="usuarioTwo">
 

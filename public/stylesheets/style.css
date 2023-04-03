@@ -25,7 +25,7 @@ a{
     list-style-type: none;
 }
 body {
-    background-image: url(./fundo.jpeg);
+    background-image: url(/public/images/);
     font-family: 'Open Sans', sans-serif;
     flex-flow:column;
     display: flex;
