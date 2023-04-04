@@ -3,9 +3,9 @@
  async function calcularFrete  ()  {
   
     const valoresFretePorRegiao = {
-        'SP' : 'R$ 19,90',
-        'RS' : 'R$ 39,90',
-        'Outros' : 'R$ 40,00' 
+        'SP' : '19.90',
+        'RS' : '39.90',
+        'Outros' : '40.00' 
       
       }
 
@@ -27,7 +27,7 @@
       console.log('frete',frete)
       
       frete.innerText = valorFrete
-
+      calcularTotal()
     } catch (error) {
       console.log('error',error)
    alert (error)
@@ -87,19 +87,22 @@ carrinho.forEach(function(item) {
   
  
 // ----------------------------------------------------------------------------------------------------------
-   
-const quantidadeFrete = document.getElementById('frete')
-
-const quantidadePreco = document.getElementById('preco-produto')
-
-const totalProduto = document.getElementById('total-produto')
 
 function calcularTotal (){
-  const frete = parseFloat(quantidadeFrete.value);
-  const preco = parseFloat(quantidadePreco.value);
+  
+  const quantidadeFrete = document.getElementById('frete')
+  
+  const quantidadePreco = document.getElementById('preco-produto')
+  
+  const totalProduto = document.getElementById('total-produto')
+
+  const frete = parseFloat(quantidadeFrete.innerText)||0;
+
+  const preco = parseFloat(quantidadePreco.innerText);
+
   const total = frete + preco;
 
-  totalProduto.innerText = total.toFixed(2);
+  totalProduto.innerText = total.toFixed(2)
 }
 
 calcularTotal()

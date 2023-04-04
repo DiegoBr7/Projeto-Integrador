@@ -1,53 +1,46 @@
-const itemAdicionado = document.getElementById("add-to-cart-1");
+const itemAdicionado = document.getElementById('linkCompra');
 
 itemAdicionado.addEventListener('click',function(evt){
 evt.preventDefault();
-
-//Obter as informacoes dos produtoo selecionados
 
 const nomeValor = document.querySelector('card-product-name').textContent;
 
 const precoValor = document.querySelector('card-product-proce').textContent;
 
-// criar um objeto com as infomacoes do produto
-const product = {
-   name:nomeValor,
-   price:precoValor
+let carrinho = localStorage.getItem('carrinho');
+
+if(carrinho === null){
+ carrinho = [];
+}else{
+  carrinho = JSON.parse(carrinho)
 }
 
+carrinho.push({nome:nomeValor,preco:precoValor});
 
-// adiciona o produto no localStorage
+localStorage.setItem('carrinho', JSON.stringify(carrinho))
 
-let cartItems = JSON.parse(localStorage.getItem('cartItems')) || [];
-
-cartItems.push(product);
-
-localStorage.setItem('cartItems', JSON.stringify(cartItems));
-
-// Redirecionar o usuario para a pagina de carrinho
-
-window.location.href = '/carrinho';
+window.location.href('/carrinho')
 
 })
 
 
 
-// -----------------------------------------------------------------------------------------
+// ------------------------------------------Carrocel----------------------------------------------------------------
 
-// let carrinho = localStorage.getItem('carrinho');
+document.getElementById('radio1').checked = true;
+let counter = 1;
 
-// if(carrinho === null){
-//  carrinho = [];
-// }else{
-//   carrinho = JSON.parse(carrinho)
-// }
+setInterval(() => {
+  nextImage();
+}, 4000);
 
-// carrinho.push({nome:nomeValor,preco:precoValor});
-
-// localStorage.setItem('carrinho', JSON.stringify(carrinho))
-
-// window.location.href('/carrinho')
-
+function nextImage () {
+  counter++;
+  if (counter > 5) {
+    counter = 1;
+  }
+  document.getElementById('radio' + counter).checked = true;
+}
 
 
 

@@ -20,7 +20,7 @@
 }
 
 body{
-    background-image:url(/images/background-image.jpeg)
+    background-image: url('/images/background-image.jpeg');
 
 }
  

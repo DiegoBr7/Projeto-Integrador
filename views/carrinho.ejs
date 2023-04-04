@@ -66,7 +66,7 @@
                 <% produtos.forEach(produto => { %>
                   <tr>
                     <td>Produto:</td>
-                    <td>R$ <span  id="preco-produto"> <%= produto.preco %>   </span> </td>
+                    <td> <span  id="preco-produto"> <%= produto.preco %>   </span> </td>
                   </tr>
                   <% }) %>
                 
@@ -77,15 +77,17 @@
                 
                   <tr>
                     <td>Total:</td>
-                    <td>R$ <span id="total-produto" >  </span> </td>
+                    <td> <span id="total-produto" >  </span> </td>
                   </tr>
-                 
+                   
               </table>
               
                   <div class="goto-payment">
-                    <button type="submit"><a href="http://localhost3000/confirmation">Finalizar Compra</a></button>
+                    <button type="submit"><a href="http://localhost:3000/confirmation/">Finalizar Compra</a></button>
                   </div>
                   <a href="#">Continuar comprando</a>
+
+                  
             </form>
             </form>
           </aside>

@@ -25,7 +25,7 @@ a{
     list-style-type: none;
 }
 body {
-    background-image: url(/public/images/);
+  background-image: url('/images/background-image.jpeg');
     font-family: 'Open Sans', sans-serif;
     flex-flow:column;
     display: flex;
@@ -803,12 +803,11 @@ main > .carrinhoOne{
 
 .cart h2 {
   font-size: 1.2rem;
-  margin: -2rem 0 1rem 1rem;
+  margin-top: 2rem;
 }
 
 .cart-container {
-  display: flex;
-  flex-direction: row;
+  display: block;
   gap: 1rem;
   font-weight: 600;
 }
@@ -916,8 +915,8 @@ main > .carrinhoOne{
 }
 
 .cart-shipping {
-  margin: 3rem auto 1rem;
-  width: 95%;
+  margin: 4rem auto 1rem;
+  margin-left: 480px;
 }
 
 .cart-shipping input,

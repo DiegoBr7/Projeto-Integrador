@@ -19,6 +19,7 @@ var homeRouter = require('./routes/home')
 var alimentacaoRouter = require('./routes/alimentacao')
 var carrinhoRouter = require('./routes/carrinho')
 var confirmationRouter = require('./routes/confirmation')
+var loginRouter = require('./routes/login')
 
 
 
@@ -55,6 +56,7 @@ app.use('/home', homeRouter);
 app.use('/alimentacao', alimentacaoRouter)
 app.use('/carrinho' , carrinhoRouter);
 app.use('/confirmation', confirmationRouter);
+app.use('/login',loginRouter)
 
 
 
