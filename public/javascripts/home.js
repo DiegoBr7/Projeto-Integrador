@@ -1,7 +1,9 @@
-const itemAdicionado = document.getElementById('linkCompra');
+const itemAdicionado = document.getElementsByClassName('add-to-cart-link');
+console.log('cheguei')
 
-itemAdicionado.addEventListener('click',function(evt){
+itemAdicionado[0].addEventListener('click',function(evt){
 evt.preventDefault();
+console.log('cheguei2')
 
 const nomeValor = document.querySelector('card-product-name').textContent;
 

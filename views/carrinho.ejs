@@ -26,8 +26,10 @@
             <div class="cart-products-info">
               <img src="/images/cart-product1.webp" alt="Produto no carrinho 1">
               <div class="cart-product-description">
-                <p>Cama Clássica Flicks Cáqui Pequena Cáqui Pequena Cáqui Pequena Cáqui Pequena Cáqui Pequena</p>
-                <p>Marca: Flicks</p>
+                
+        
+                <p> <%= produtos[0].nome %> </p>
+                <p>Marca: <%= produtos[0].nome %> </p>
                 <p>Em estoque</p>
               </div>
             </div>
@@ -42,7 +44,7 @@
                 <a class="cart-remove-item" href="#"><span>Remover</span></a>
               </div>
               <div class="cart-product-price">
-                <p>R$ 179,90</p>
+                <p> <%= produtos.preco %> </p>
               </div>
             </div>          
 

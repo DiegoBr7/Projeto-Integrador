@@ -40,6 +40,7 @@ input[type="checkbox"]
 }
 
  .mn{
+  
      display: block;
      padding: 20px 5px;
      color: white;
@@ -58,6 +59,7 @@ input[type="checkbox"]
 
 
 nav {
+
 height: 100%;
 width: 15.625rem;
 position: absolute;
@@ -85,20 +87,17 @@ ul{
     list-style: none;
 }
 
-a{
-    list-style: none;
 
-}
 
 .titulo{
     border-radius: 0.9rem;
     border: 0.2rem solid black;
-    margin-left: 26.5rem;
+    margin-left: 30.5rem;
     margin-bottom: -2rem;
-    width: 40rem;
+    width: 25rem;
+    background-color: var(--primary-opacity);
 }
 .dados{
-
     margin-top: 0.5rem;
     margin-left: 1rem;
 }
@@ -108,19 +107,21 @@ a{
 
 .tituloTwo{
     background-color: var(--primary-opacity);
-    width: 40rem;
+    width: 25rem;
     margin-top: 5rem;
-    margin-left: 26.5rem;
+    margin-left: 30.5rem;
     border: 0.2rem solid black;
     border-radius: 0.9rem;
 }
 
 ul > li > a{
     margin-left: 3rem;
-    
-    font-size: 25px;
-    list-style: none;
     color: black;  
+    font-size:25px
+}
+
+.meu-link{
+    text-decoration: none;
 }
 
 
@@ -130,7 +131,6 @@ border-radius: 5rem;
 }
 
 .span{
-
  font-size:17px
 }
 

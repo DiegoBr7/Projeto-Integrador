@@ -12,9 +12,9 @@ const carrinhoController = require('../controllers/CarrinhoController');
 
 router.get('/endereco', EntregaController.obterEnderecoPorCep)
 
-router.get('/',carrinhoController.exibir)
+router.get('/add/:id/:id_usuario/:quantidade',carrinhoController.addCarrinho)
 
-router.get('/', carrinhoController.index )
+//router.get('/',carrinhoController.exibir)
 
 // router.post('/' , EntregaController.obterEnderecoPorCep)
 

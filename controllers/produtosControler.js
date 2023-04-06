@@ -4,7 +4,7 @@ const { Produto } = require('../models');
 module.exports = {
   index: async (req, res) => {
     const produtos = await Produto.findAll()
-    console.log(produtos)
+
     res.render('home', { produtos, title: "index" });
   },
   create: async (req, res) => {
@@ -29,7 +29,7 @@ module.exports = {
   update: async (req, res) => {
     const { id } = req.params;
     const { nome, preco, id_categorias } = req.body;
-    console.log(nome, preco , id_categorias)
+
     const produtos = await Produto.update(
       { nome, preco , id_categorias },
       {
